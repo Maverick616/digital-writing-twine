@@ -11,41 +11,41 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Smasher" startnode="1" creator="Twine" creator-version="2.3.3" ifid="EC70A478-5B6E-4C33-AABE-9A4035C4D2A7" zoom="1" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Infiltration" tags="Start" position="900,199.5" size="100,100">Adam cracks his iron knuckles; a slight grin betrays his face as he thinks: “One thousand dollars well spent.” He jumps up onto a nearby boulder and surveys the mansion in front of him; it was more like a fortress. 
+<tw-storydata name="Smasher" startnode="1" creator="Twine" creator-version="2.3.3" ifid="EC70A478-5B6E-4C33-AABE-9A4035C4D2A7" zoom="1" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+</script><tw-passagedata pid="1" name="Infiltration" tags="Start" position="901,198" size="100,100">&#39;&#39;Adam&#39;&#39; cracks his iron knuckles; a slight grin betrays his face as he thinks: “One thousand dollars well spent.” He jumps up onto a nearby boulder and surveys the mansion in front of him; it was more like a fortress. 
 &lt;img class=&quot;story-image&quot; src=&quot;./images/mansion.jpg&quot; alt=&quot;picture of the mansion&quot; /&gt;
 With his night vision implants he could see cybernetically enhanced armed guards patrolling the grounds and guarding every entrance. Adam knew he’d need to fry the estate’s power if he was to infiltrate the main building, eliminating some of the guards would be helpful too. (set: $objectives to 0)
 
 [[Go to the electrical substation]]
-[[Eliminate nearby guards]]</tw-passagedata><tw-passagedata pid="2" name="Go to the electrical substation" tags="" position="750,350.5" size="100,100">{(if: $objectives is 0)[After descending from his perch and walking to the gate he leaps onto it, quickly finding his target before quietly descending.]} Adam moves towards the electric substation; two guards are there playing cards and watching projected holograms. They don’t notice Adam until he’s towering over them, but by then it’s too late. Adam decapitates them both in one motion with his arm blade. Adam punches a hole in the door before entering. He attaches a powerful overloader to the power supply before leaving. (set: $objectives to $objectives + 1)
+[[Eliminate nearby guards]]</tw-passagedata><tw-passagedata pid="2" name="Go to the electrical substation" tags="" position="750,350" size="100,100">{(if: $objectives is 0)[After descending from his perch and walking to the gate he leaps onto it, quickly finding his target before quietly descending.]} Adam moves towards the electric substation; two guards are there playing cards and watching projected holograms. They don’t notice Adam until he’s towering over them, but by then it’s too late. Adam decapitates them both in one motion with his arm blade. Adam punches a hole in the door before entering. He attaches a powerful overloader to the power supply before leaving. (set: $objectives to $objectives + 1)
 
-{(if: $objectives is 1)[[Eliminate nearby guards]](else:)[[Approach the mansion]]}</tw-passagedata><tw-passagedata pid="3" name="Eliminate nearby guards" tags="" position="1051,350.5" size="100,100">{(if: $objectives is 0)[After descending from his perch and walking to the gate he leaps over, landing on one guard, crushing him.]} Adam activates a localised EMP, frying the equipment of the guards in his vicinity. One tries to fire a flare to alert the rest of the militia at the estate but Adam dashes over quicker than the eye can see and crushes the flare gun. The guard pulls out a knife as Adam rips his throat out. The man crumbles as Adam dispatches two more with his arm blade in the blink of an eye. The last few attempt to flee but Adam shoots them with electric darts. They make it a few more steps before their cybernetics are overloaded, frying their internal organs. (set: $objectives to $objectives + 1)
+{(if: $objectives is 1)[[Eliminate nearby guards]](else:)[[Approach the mansion]]}</tw-passagedata><tw-passagedata pid="3" name="Eliminate nearby guards" tags="" position="1051,350" size="100,100">{(if: $objectives is 0)[After descending from his perch and walking to the gate he leaps over, landing on one guard, crushing him.]} Adam activates a localised EMP, frying the equipment of the guards in his vicinity. One tries to fire a flare to alert the rest of the militia at the estate but Adam dashes over quicker than the eye can see and crushes the flare gun. The guard pulls out a knife as Adam rips his throat out. The man crumbles as Adam dispatches two more with his arm blade in the blink of an eye. The last few attempt to flee but Adam shoots them with electric darts. They make it a few more steps before their cybernetics are overloaded, frying their internal organs. (set: $objectives to $objectives + 1)
 
-{(if: $objectives is 1)[[Go to the electrical substation]](else:)[[Approach the mansion]]}</tw-passagedata><tw-passagedata pid="4" name="Approach the mansion" tags="" position="900,499.5" size="100,100">Adam approaches the mansion and walks up to a side door. He waves at the camera above the door and activates the overloader remotely. This instantly causes everything plugged into and powered by the substation to fry and explode. The mansion goes dark as voices start yelling. Adam breaches the door with minimal effort. He wades through the dark corridors before arriving at the loungeroom. (set: $fun to 0) (set: $data to 0) (set: $target to 1)
+{(if: $objectives is 1)[[Go to the electrical substation]](else:)[[Approach the mansion]]}</tw-passagedata><tw-passagedata pid="4" name="Approach the mansion" tags="" position="902,499" size="100,100">Adam approaches the mansion and walks up to a side door. He waves at the camera above the door and activates the overloader remotely. This instantly causes everything plugged into and powered by the substation to fry and explode. The mansion goes dark as voices start yelling. Adam breaches the door with minimal effort. He wades through the dark corridors before arriving at the loungeroom. (set: $fun to 0) (set: $data to 0) (set: $target to 0)
 
 [[Have some fun]]
 [[Get the data]]
-[[Eliminate the target]]</tw-passagedata><tw-passagedata pid="5" name="Have some fun" tags="" position="902,649.5" size="100,100">YES(set: $fun to 1)
+[[Eliminate the target]]</tw-passagedata><tw-passagedata pid="5" name="Have some fun" tags="" position="902,649" size="100,100">YES(set: $fun to 1)
 
-{(if: $data is 0 and $target is 1)[[Get the data]]&lt;br&gt;
-[[Eliminate the target]]
-(else-if: $data is 1 and $target is 1)[[Eliminate the target]]
-(else-if: $data is 0 and $target is 0)[[Get the data]]
-(else:)[[Leave the mansion]]}</tw-passagedata><tw-passagedata pid="6" name="Get the data" tags="" position="749,648.5" size="100,100">Adam moves through to the study, crushing a guards head between his metal hands on the way. Adam enters the study and scans the area. Outside he hears Guards talking.
+{(if: $target is 0)[[Eliminate the target]]}{(if: $target is 0 and $data is 0)[&lt;br&gt;]}{(if: $data is 0)[[Get the data]]}{(if: $data is 1 and $target is 1)[[Leave the mansion]]}</tw-passagedata><tw-passagedata pid="6" name="Get the data" tags="" position="749,648" size="100,100">Adam moves through to the study, crushing a guards head between his metal hands on the way. Adam enters the study and scans the area. Outside he hears Guards talking.
 	“Jesus Christ man what the fuck is going on?”
 	“We’re under attack, if the power had gone off normally the back-up generator would’ve turned on.”
 	“You don’t think…”
 	“No way man, I heard Adam Smasher was killed recently, there’s no way it’s him.”
-The voices were getting closer. Adam finds the data he wants and uploads it to his suit’s drive.
+The voices were getting closer. Adam finds the //data// he wants and uploads it to his suit’s drive.
 	“Oh my god… who is that?”
 	“Jesus… from that necklace I think it’s Frank.”
-	“Fuck man, fuck, what if it is him man fuck!”
+	“Fuck man, fuck, what if it is Smasher man fuck!”
 Adam leaves the study and deals with the two guards. (set: $data to 1)
 
-{(if: $target is 1)[[Eliminate the target]](else:)[[Leave the mansion]]}
-{(if: $fun is 0)[[Have some fun]]}</tw-passagedata><tw-passagedata pid="7" name="Eliminate the target" tags="" position="1052,648.5" size="100,100">(set: $target to 0)
+{(if: $target is 0)[[Eliminate the target]]}{(if: $target is 1)[[Leave the mansion]]}
+{(if: $fun is 0)[[Have some fun]]}</tw-passagedata><tw-passagedata pid="7" name="Eliminate the target" tags="" position="1052,648" size="100,100">(set: $target to 1)
 
-{(if: $data is 0)[[Get the data]](else:)[[Leave the mansion]]}
-{(if: $fun is 0)[[Have some fun]]}</tw-passagedata><tw-passagedata pid="8" name="Leave the mansion" tags="" position="901,799.5" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+{(if: $data is 0)[[Get the data]](if: $data is 1)[[Leave the mansion]]}
+{(if: $fun is 0)[[Have some fun]]}</tw-passagedata><tw-passagedata pid="8" name="Leave the mansion" tags="" position="901,799" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
