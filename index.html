@@ -11,7 +11,9 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Smasher" startnode="1" creator="Twine" creator-version="2.3.3" ifid="EC70A478-5B6E-4C33-AABE-9A4035C4D2A7" zoom="1" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Infiltration" tags="Start" position="900,199.5" size="100,100">Adam cracks his iron knuckles; a slight grin betrays his face as he thinks: “One thousand dollars well spent.” He jumps up onto a nearby boulder and surveys the mansion in front of him; it was more like a fortress. With his night vision implants he could see cybernetically enhanced armed guards patrolling the grounds and guarding every entrance. Adam knew he’d need to fry the estate’s power if he was to infiltrate the main building, eliminating some of the guards would be helpful too. (set: $objectives to 0)
+<tw-storydata name="Smasher" startnode="1" creator="Twine" creator-version="2.3.3" ifid="EC70A478-5B6E-4C33-AABE-9A4035C4D2A7" zoom="1" format="Harlowe" format-version="3.0.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Infiltration" tags="Start" position="900,199.5" size="100,100">Adam cracks his iron knuckles; a slight grin betrays his face as he thinks: “One thousand dollars well spent.” He jumps up onto a nearby boulder and surveys the mansion in front of him; it was more like a fortress. 
+&lt;img class=&quot;story-image&quot; src=&quot;./images/mansion.jpg&quot; alt=&quot;picture of the mansion&quot; /&gt;
+With his night vision implants he could see cybernetically enhanced armed guards patrolling the grounds and guarding every entrance. Adam knew he’d need to fry the estate’s power if he was to infiltrate the main building, eliminating some of the guards would be helpful too. (set: $objectives to 0)
 
 [[Go to the electrical substation]]
 [[Eliminate nearby guards]]</tw-passagedata><tw-passagedata pid="2" name="Go to the electrical substation" tags="" position="750,350.5" size="100,100">{(if: $objectives is 0)[After descending from his perch and walking to the gate he leaps onto it, quickly finding his target before quietly descending.]} Adam moves towards the electric substation; two guards are there playing cards and watching projected holograms. They don’t notice Adam until he’s towering over them, but by then it’s too late. Adam decapitates them both in one motion with his arm blade. Adam punches a hole in the door before entering. He attaches a powerful overloader to the power supply before leaving. (set: $objectives to $objectives + 1)
@@ -22,7 +24,13 @@
 
 [[Have some fun]]
 [[Get the data]]
-[[Eliminate the target]]</tw-passagedata><tw-passagedata pid="5" name="Have some fun" tags="" position="902,649.5" size="100,100">YES(set: $fun to 1)</tw-passagedata><tw-passagedata pid="6" name="Get the data" tags="" position="749,648.5" size="100,100">Adam moves through to the study, crushing a guards head between his metal hands on the way. Adam enters the study and scans the area. Outside he hears Guards talking.
+[[Eliminate the target]]</tw-passagedata><tw-passagedata pid="5" name="Have some fun" tags="" position="902,649.5" size="100,100">YES(set: $fun to 1)
+
+{(if: $data is 0 and $target is 1)[[Get the data]]&lt;br&gt;
+[[Eliminate the target]]
+(else-if: $data is 1 and $target is 1)[[Eliminate the target]]
+(else-if: $data is 0 and $target is 0)[[Get the data]]
+(else:)[[Leave the mansion]]}</tw-passagedata><tw-passagedata pid="6" name="Get the data" tags="" position="749,648.5" size="100,100">Adam moves through to the study, crushing a guards head between his metal hands on the way. Adam enters the study and scans the area. Outside he hears Guards talking.
 	“Jesus Christ man what the fuck is going on?”
 	“We’re under attack, if the power had gone off normally the back-up generator would’ve turned on.”
 	“You don’t think…”
